@@ -23,7 +23,7 @@ const App: React.FC = () => {
     <div className='App'>
       <h1>Google Login</h1>
       <GoogleLogin
-        clientId='YOUR_GOOGLE_CLIENT_ID'
+        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID || ""}
         buttonText='Log in with Google'
         onSuccess={handleLogin}
         onFailure={handleLogin}
